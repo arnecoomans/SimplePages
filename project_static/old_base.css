@@ -1,0 +1,132 @@
+body {
+  /* Website Background */
+  background-color: var(--site-background-color);
+  background-image: var(--site-background-image);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Text */
+  font-family: var(--site-font-famly);
+  font-size: var(--site-font-size);
+  /* font-size: 2em; */
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -100px;
+  visibility: hidden;
+}
+
+/** Section styling */
+div.content {
+  
+}
+div.content > section.element {
+  display: block;
+}
+div.content > section.element > div.element-content {
+  box-sizing: border-box;
+  padding: 0.2em 2em;
+  height: 100%;
+}
+
+div.content > section.element.hero-right > div.element-content,
+div.content > section.element.hero-left > div.element-content {
+  width: 66.6666%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-attachment: fixed;
+}
+div.content > section.element.hero-left > div.element-content {
+    float: right;
+}
+
+/* Hero Image */
+div.content > section.element > div.hero-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-clip: content-box;
+  background-attachment: scroll;
+  width: 33.33333333333%;
+  height: 100%;
+  vertical-align: text-bottom;
+}
+div.content > section.element.hero-solo > div.hero-image {
+  width: 100%;
+  background-size: contain;
+}
+  div.content > section.element > div.hero-image > span.alt {
+    margin: 0 0 0 2.5%;
+    padding: 1em 3em;
+    width: 22.5%;
+    border-radius: 1em;
+    background-color: rgba(255,255,255,0.5);
+    position: absolute;
+    top: 75%;
+    display: none;
+    text-align: center;
+  }
+  div.content > section.element > div.hero-image:hover > span.alt {
+    display: block;
+  }
+/* Hero Left */
+div.content > section.element.hero-left > div.hero-image {
+  float: left;
+}
+/* Hero Right */
+div.content > section.element.hero-right > div.hero-image {
+  float: right;
+}
+
+/* Content */
+  /** Columns */
+  div.content > section.element.one-col > div.element-content {
+    columns: 1;
+  }div.content > section.element.two-col > div.element-content {
+    columns: 2;
+  }
+  div.content > section.element.three-col > div.element-content {
+    columns: 3;
+  }
+
+  /** Headers */
+
+
+  div.content > section.element.hero-left > h1,
+  div.content > section.element.hero-left > h2,
+  div.content > section.element.hero-left > h3,
+  div.content > section.element.hero-left > h4,
+  div.content > section.element.hero-left > h5,
+  div.content > section.element.hero-left > h6 {
+    box-sizing: border-box;
+    width: 66.6666%;
+    float: right;
+    padding: 0.2em 1em;
+    margin: 1em 0 0 0;
+    border-bottom: 1px solid black;
+  }
+  div.content > section.element.hero-right > h1,
+  div.content > section.element.hero-right > h2,
+  div.content > section.element.hero-right > h3,
+  div.content > section.element.hero-right > h4,
+  div.content > section.element.hero-right > h5,
+  div.content > section.element.hero-right > h6 {
+    width: 66.6666%;
+
+  }
+
+
+  div.content > section.element > div.element-content > h1,
+  div.content > section.element > div.element-content > h2,
+  div.content > section.element > div.element-content > h3,
+  div.content > section.element > div.element-content > h4,
+  div.content > section.element > div.element-content > h5,
+  div.content > section.element > div.element-content > h6 {
+    font-size: 85%;
+    border-bottom: 1px solid black;
+  }

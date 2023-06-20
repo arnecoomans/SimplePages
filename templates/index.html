@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="description"  content="{{ page.meta_description|default:"This is a simple page" }}">
+    <meta name="author"       content="{{ page.user }}">
+
+    <title>{{ page.title }} - {{ page.site.name }}</title>
+    
+
+    <!-- Bootstrap -->
+    <link href="{% static 'bootstrap.min.css' %}" rel="stylesheet">
+    <!-- link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" -->
+    
+    <script type="text/javascript" src="{% static 'jquery-3.7.0.min.js' %}"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'site.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'base.css' %}" />
+  </head>
+  <body>
+<div class="page-header">
+<!-- Header -->
+  {% include 'header.html' %}
+  {% include 'navigation.html' %}
+  {% include 'messages.html' %}
+</div>
+
+<!-- Content -->
+<div class="content wrapper" id="content">
+  {% block content %}{% endblock %}
+</div>
+    <div class="spacer"></div>
+
+    <!-- Footer -->
+    {% include 'footer.html' %}
+  </body>
+</html>

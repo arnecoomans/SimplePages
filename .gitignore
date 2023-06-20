@@ -1,0 +1,29 @@
+# Ignore Python files
+*.pyc
+*~
+*.bak
+__pycache__
+
+# Keep database outside repo
+*.sqlite3
+# Keep settings file outside repo
+settings.py
+setting_*.py
+
+
+# Keep statics and uploads outside repo
+/public/static
+/public/documents/*
+/public/documents/files/*
+/media/
+
+# allow for custom css's
+custom_*.css
+
+# Keep logs outside repo
+/logs
+/gunicorn
+/run
+
+# Keep mac-folders outside repo
+.DS_Store

@@ -1,0 +1,22 @@
+:root {
+  /** Site wide */
+  --site-background-color: ;
+  --site-background-image: url('/media/site_background.png');
+  --site-font-family: sans-serif;
+  --site-font-size: 2em;
+
+  --site-offset: 0.5em;
+  --site-skew: 1.2deg;
+
+  /** Header */
+  --header-background-color: white;
+  --header-background-image: url('');
+  --header-border: 3px solid #333;
+  --header-font-family: sans-serif;
+  --header-font-size: 19px;
+  --header-font-color: #333;
+  --header-skew: var(--site-skew);
+
+  /** Objects */
+  
+}

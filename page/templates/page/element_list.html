@@ -1,0 +1,39 @@
+{% extends 'index.html' %}
+
+{% block content %}
+  {% for element in element_list %}
+    <section class="section element {{ element.hero_template }} {{ element.content_template }}"
+      id="{% if element.anchor %}element-{{ element.anchor|slugify }}{% else %}element-{{ element.id }}{% endif %}" 
+      {% comment %}  {% endcomment %}
+      {% if element.background_image %}style="background-image: url('/media/{{ element.background_image.source }}');"{% endif %}
+      >
+      {% if element.anchor %}<a class="anchor" name="{{ element.anchor|slugify }}"></a>{% endif %}
+      <!-- Hero Image -->
+        {% if element.hero_image %}
+          <div class="hero-image" style="background-image: url('/media/{{ element.hero_image.source }}')" alt="{{ element.hero_image.description }}">
+            <span class="alt">{{ element.hero_image.description }}</span>
+          </div>
+        {% endif %}
+      
+      <!-- Element Title -->
+      {% if element.title %}
+          <h1 class=>{{ element.title }}</h1>
+      {% endif %}
+      <!-- Element Content -->
+      {% if element.hero_template != 'hero-solo' %}
+          <div class="element-content"> 
+            {% if element.get_format_display|lower  == 'plain text' %}
+              {{ element.content|linebreaks }}
+            {% elif element.get_format_display|lower  == 'markdown' %}
+              {{ element.content|markdown|safe }}
+            {% elif element.get_format_display|lower  == 'html' %}
+              {{ element.content|safe|linebreaks }}
+            {% elif element.get_format_display|lower  == 'image' %}
+              <img src="/media/{{ element.content }}" class="image-element">
+            {% endif %}
+          </div>
+        {% endif %}
+
+    </section>
+  {% endfor %}
+{% endblock %}
