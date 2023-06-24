@@ -2,12 +2,11 @@
 
 {% block content %}
   {% for element in element_list %}
-    <section class="section element {{ element.hero_template }} {{ element.content_template }}"
-      id="{% if element.anchor %}element-{{ element.anchor|slugify }}{% else %}element-{{ element.id }}{% endif %}" 
-      {% comment %}  {% endcomment %}
+    <section class="section element {{ element.hero_template }} {{ element.content_template }}{% if element.anchor %} anchor{% endif %}"
+      id="{% if element.anchor %}{{ element.anchor|slugify }}{% else %}element-{{ element.id }}{% endif %}" 
       {% if element.background_image %}style="background-image: url('/media/{{ element.background_image.source }}');"{% endif %}
       >
-      {% if element.anchor %}<a class="anchor" name="{{ element.anchor|slugify }}"></a>{% endif %}
+      {% comment %} {% if element.anchor %}<a class="anchor" name="{{ element.anchor|slugify }}" id="{{ element.anchor|slugify }}"></a>{% endif %} {% endcomment %}
       <!-- Hero Image -->
         {% if element.hero_image %}
           <div class="hero-image" style="background-image: url('/media/{{ element.hero_image.source }}')" alt="{{ element.hero_image.description }}">

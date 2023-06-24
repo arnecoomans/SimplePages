@@ -30,12 +30,13 @@
 </div>
 
 <!-- Content -->
-<div class="content wrapper" id="content">
+<div class="content wrapper" id="content" data-bs-spy="scroll" data-bs-target="#main-navigation" smoothScroll="true" tabindex="0">
   {% block content %}{% endblock %}
 </div>
     <div class="spacer"></div>
 
     <!-- Footer -->
     {% include 'footer.html' %}
+    <script type="text/javascript" src="{% static 'bootstrap.min.js' %}"></script>
   </body>
 </html>

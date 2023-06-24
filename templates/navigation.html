@@ -1,10 +1,12 @@
-<nav class="navbar sticky-top">
-  <ul>
-    <li>Home</li>
-    <li>One</li>
-    <li>Two</li>
-    <li>Three</li>
-    <li>Four</li>
-    <li>Five</li>
-  </ul>
-</nav>
+{% if element_list.all.count > 0 %}
+  <nav class="navbar sticky-top navbar-expand-lg" id="main-navigation">
+    <ul class="navbar-nav me-auto">
+      <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+      {% for element in element_list %}
+        {% if element.anchor %}
+        <li class="nav-item"><a class="nav-link" href="#{{ element.anchor|slugify }}">{{ element.anchor|title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  </nav>
+{% endif %}

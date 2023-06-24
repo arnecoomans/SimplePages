@@ -29,10 +29,9 @@ div.page-header > nav {
 div.page-header > header {
   padding: 0.5em 0 0 1em;
 }
-div.page-header > nav > ul {
-}
-div.page-header > nav > ul > li {
-  display: inline-block;
+div.page-header > nav.navbar {
+  margin-left: 4em;
+  margin-bottom: 0.2em;
 }
 
 /* Content */
