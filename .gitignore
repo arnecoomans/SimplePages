@@ -6,15 +6,15 @@ __pycache__
 
 # Keep database outside repo
 *.sqlite3
+
 # Keep settings file outside repo
 settings.py
-setting_*.py
-
+basesettings.py
+SimplePages/*Setting.py
+/SimplePages/**Settings.py
 
 # Keep statics and uploads outside repo
-/public/static
-/public/documents/*
-/public/documents/files/*
+/static/
 /media/
 
 # allow for custom css's
