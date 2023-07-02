@@ -65,7 +65,6 @@ div.content > section.element.hero-right > div.hero-image {
 div.content > section.element.hero-solo > div.hero-image {
   /* Full Width Hero Image */
   width: 100%;
-  background-size: contain;
 }
   /* Hero Description / Alternative Text */
   div.content > section.element > div.hero-image > span.alt {
