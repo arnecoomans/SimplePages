@@ -15,11 +15,11 @@
         {% endif %}
       
       <!-- Element Content -->
-      <!-- Element Title -->
-      {% if element.title %}
-          <h1 class=>{{ element.title }}</h1>
-      {% endif %}
       {% if element.hero_template != 'hero-solo' %}
+          <!-- Element Title -->
+          {% if element.title %}
+            <h1 class=>{{ element.title }}</h1>
+          {% endif %}
           <div class="element-content"> 
             {% if element.get_format_display|lower  == 'plain text' %}
               {{ element.content|linebreaks }}
